@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const getPost = async () => {
@@ -13,9 +14,12 @@ export default async function Posts() {
       {posts.map((p) => {
         return (
           <>
-            <div key={p.id}>
-                <p>{p.title}</p>
-                <p>{p.body}</p>
+            <div key={p.id} className="border-2 border-slate-50 p-4">
+              <p className="text-2xl font-extrabold space-y-1 mb-4">{p.title}</p>
+              <p>{p.body}</p>
+              <Link href={`posts/${p.id}`}>
+                <button className="bg-green-400 px-4 py-2 text-black rounded-xl hover:bg-green-800">Details</button>
+              </Link>
             </div>
           </>
         );
