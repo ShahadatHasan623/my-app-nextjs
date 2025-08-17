@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.testing-purpose-css{
+  color:rgb(81, 255, 0);
+  background-color: rgb(139, 89, 23);
+}
