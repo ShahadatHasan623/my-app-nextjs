@@ -1,5 +1,10 @@
+import Link from "next/link";
 import MealsSearch from "./components/MealsSearch";
 
+export const metadata = {
+  title:"All meals",
+  description: "All meals data fetch loading",
+};
 export default async function Meals({ searchParams }) {
   const query = searchParams?.search || "";
 
@@ -29,6 +34,7 @@ export default async function Meals({ searchParams }) {
             <div key={singleMeal.idMeal}>
               <p className="text-3xl font-bold">{singleMeal.strMeal}</p>
               <p>{singleMeal.strInstructions}</p>
+              <Link href={`/meals/${singleMeal.idMeal}`}>Details</Link>
             </div>
           ))
         ) : (
