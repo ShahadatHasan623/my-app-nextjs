@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono,Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -12,26 +12,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const poppins =Poppins({
-  weight:["400","600","700"],
-  subsets:["latin"]
-})
+const poppins = Poppins({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: {
-    default: "Learning Nextjs",
-    template: "%s | Learning Nextjs",
+    default: "Foodies - Explore Delicious Recipes",
+    template: "%s | Foodies",
   },
-  keywords: ["Next.js", "React", "JavaScript"],
-  description: "Trying to learn Nextjs as best as we can",
+  description:
+    "Foodies is your ultimate destination for delicious recipes, trending foods, and cooking inspiration. Discover, cook, and enjoy tasty meals!",
+  keywords: [
+    "Foodies",
+    "Recipes",
+    "Cooking",
+    "Food Blog",
+    "Delicious Meals",
+    "Food Inspiration",
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.className} antialiased`}
-      >
+      <body className={`${poppins.className} antialiased`}>
         <Navbar></Navbar>
         {children}
       </body>

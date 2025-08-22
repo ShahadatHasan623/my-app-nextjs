@@ -16,6 +16,12 @@ export default function Navbar() {
             <Link href="/posts">
               <li>Posts</li>
             </Link>
+            <Link href="/products">
+              <li>products</li>
+            </Link>
+            <Link href="/products/add">
+              <li>productsAdd</li>
+            </Link>
             <Link href="/meals">
               <li>Meals</li>
             </Link>

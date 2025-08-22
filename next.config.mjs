@@ -6,7 +6,19 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.themealdb.com',
       },
+      
     ],
+  },
+  async redirects() {
+    return [
+      // Basic redirect
+      {
+        source: '/products/add',
+        destination: '/dashboard/products/add',
+        permanent: true,
+      },
+     
+    ]
   },
 };
 
